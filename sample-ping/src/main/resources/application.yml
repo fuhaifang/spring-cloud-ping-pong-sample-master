@@ -1,0 +1,36 @@
+---
+server:
+  port: 8080
+
+#management:
+#  port: -1
+
+#samplepong:
+#  ribbon:
+#    DeploymentContextBasedVipAddresses: sample-pong
+#    ReadTimeout: 5000
+#    MaxAutoRetries: 2
+#
+#samplepongdirect:
+#  ribbon:
+#    DeploymentContextBasedVipAddresses: sample-pong
+#    listOfServers: localhost:8082
+#    ReadTimeout: 5000
+#    MaxAutoRetries: 2
+#
+#another:
+#  key: anotherkeyvalue
+
+netflix:
+  atlas:
+    uri: localhost:7101
+    
+    
+    
+    
+spring:
+  rabbitmq:
+    host: 192.168.0.136
+    port: 5672
+    username: asiainfo
+    password: asiainfo     

@@ -1,0 +1,47 @@
+server:
+  port: 8086
+
+sidecar:
+  port: 8000
+
+#zuul:
+#  routes:
+#    sample-ping: /ping/**
+#retryable: true
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+      coreSize: 5     
+            
+
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 20000
+           
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 30000
+  retryable: true
+#20000       
+
+
+
+
+spring:
+  rabbitmq:
+    host: 192.168.0.136
+    port: 5672
+    username: asiainfo
+    password: asiainfo        
+        

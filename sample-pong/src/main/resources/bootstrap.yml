@@ -1,0 +1,40 @@
+---
+#spring:
+#  application:
+#    name: sample-pong
+#  cloud:
+#    config:
+#      enabled: true
+#      discovery:
+#        enabled: true
+#        serviceId: sample-config
+#eureka:
+#  instance:
+#    nonSecurePort: ${server.port:8082}
+#  client:
+#    serviceUrl:
+#      defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/
+
+---
+spring:
+  application:
+    name: sample-pong
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+        serviceId: sample-config
+
+eureka:
+  instance:
+    preferIpAddress: true
+#   ipAddress: 192.168.0.135
+    nonSecurePort: ${server.port:8082}
+  client:
+    prefer-same-zone-eureka: true
+    use-dns-for-fetching-service-urls: true
+    eurekaServerDNSName: www.eureka.com
+    eureka-server-port: 8762
+    eurekaServerURLContext: eureka
+    region: eureka-server-region

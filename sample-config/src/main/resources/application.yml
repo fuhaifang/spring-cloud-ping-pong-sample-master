@@ -1,0 +1,25 @@
+---
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@192.168.0.136:microservice.git
+          username: git
+          password: asiainfo123
+#          uri: file://d:/mygit/microservice
+          searchPaths: 
+#        native:
+#          searchLocations: classpath:/config
+  rabbitmq:
+    host: 192.168.0.136
+    port: 5672
+    username: asiainfo
+    password: asiainfo
+
+server:
+  port: 8888
+  
+  
+
+   
