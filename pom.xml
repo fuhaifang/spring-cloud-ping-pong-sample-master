@@ -17,7 +17,6 @@
         <module>sample-pong</module>
         <module>sample-monitor</module>
         <module>sample-gateway</module>
-        <module>sample-feignclient</module>
     </modules>
 
     <parent>
